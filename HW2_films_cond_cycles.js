@@ -23,21 +23,34 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
+
+
 for (let i = 1; i<=numberOfFilms; i++){     //условие, сравнение, шаг.
     let nameOfFilm = prompt('Один из последних просмотренных фильмов?', '');
-
     
-    if (nameOfFilm.length >5 || nameOfFilm ==""){
+        
+     if (nameOfFilm.length >5 || nameOfFilm =="" || nameOfFilm == null ){
         alert('Давай по новой, дружок, без пустых срок и следи за размахом. Не нужно писать описание фильма, только НАЗВАНИЕ');
         personalMovieDB.movies = {};
-     
+         
         i=0; 
-    }
+     }
     else{
         let score = prompt('На сколько оцените его?', '');
         personalMovieDB.movies[nameOfFilm] = score;
     }
 }
-console.log(personalMovieDB);
+console.log(personalMovieDB);  
 
-
+if (personalMovieDB.count < 10) {
+    alert("Просмотрено довольно мало фильмов");
+}
+else if (personalMovieDB.count > 30) {
+    alert("Вы классический зритель");
+}
+else if (personalMovieDB.count>=10 && personalMovieDB.count<=30){
+    alert("Вы киноман");
+}
+else {
+    alert("Error");
+}
