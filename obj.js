@@ -59,3 +59,4 @@ optionss.makeTest(); // круглые скобки = запуск.
 //деструктуризация обьекта
 const{border, bg} = optionss.colors;
 console.log(border); //== black
+//do it
