@@ -13,16 +13,14 @@ const obj = {
     loh: false
 };
 console.log(obj.name);
-console.log(obj['name']);
+console.log(obj['name']); //такой себе способ, лучше через точку
 //array
 
 let arr =['1','2',true,777,{},[]];
 console.log(arr[0]); //--1
 console.log(arr[2]); //-true
 
-// proverka elementov po standartu
-'caniuse.com';
-
+// ********proverka elementov po standartu = caniuse.com; *******
 
 // proverka novych standartov
 "use strict";

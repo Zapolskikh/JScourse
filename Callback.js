@@ -18,10 +18,7 @@ second();
 // выполнение второй функции только после выполнения первой
 
 function learnJS(lang,callback){    // в качестве аргемента одной функции мы передаем другую функцию
-    
-    setTimeout(function(){
-        console.log(`im learning ${lang}`); //симуляция задержики сервера в 1 секунду
-    }, 1000);
+    console.log(`im learning ${lang}`); //симуляция задержики сервера в 1 секунду
     callback();
 }
 
@@ -29,5 +26,6 @@ function done(){
     console.log('ok');
 }
 
-learnJS('JavaScript',done);     //Действия выполняются по порядку внутри функции learnJS.
-//callback вызовет done Только после вывода console.log(`im learning ${lang}`);
+learnJS('JavaScript',done);     
+
+//callback - использовании функции в качестве аргумента другой функции.
