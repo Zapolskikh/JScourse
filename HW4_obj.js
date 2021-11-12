@@ -9,7 +9,7 @@
 
 3) В методе writeYourGenres запретить пользователю нажать кнопку "отмена" или оставлять пустую строку. 
 Если он это сделал - возвращать его к этому же вопросу. После того, как все жанры введены - 
-при помощи метода forEach вывести в консоль сообщения в таком виде:
+dodelat = при помощи метода forEach вывести в консоль сообщения в таком виде:
 "Любимый жанр #(номер по порядку, начиная с 1) - это (название из массива)"*/
 
 'use strict';
@@ -17,8 +17,6 @@
 // Код возьмите из предыдущего домашнего задания
 
 let numberOfFilms;
-
-alert(1);
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -73,8 +71,11 @@ const personalMovieDB = {
         }   
     },
     writeYourGenres: function(){
-        for (let i=0; i<3; i++){     //условие, сравнение, шаг.
+        for (let i=0; i<3; i++){     //условие, сравнение, шаг
             personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером${i+1}`, '');
+            while(personalMovieDB.genres[i] =='' || personalMovieDB.genres[i] ==null) {  
+                personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером${i+1}`, '');
+                }    
         }
     },
     toggleVisibleMyDB: function(){
