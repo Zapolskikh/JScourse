@@ -90,3 +90,7 @@ personalMovieDB.showMyDB();
 personalMovieDB.detectPersonalLevel();
 personalMovieDB.writeYourGenres();
 personalMovieDB.toggleVisibleMyDB();
+
+personalMovieDB.genres.forEach(function(item,i, arr){
+    console.log(`Любимый жанр #(${i+1}) - это (${item})`);
+}); 
