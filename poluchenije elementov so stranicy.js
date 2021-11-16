@@ -10,8 +10,10 @@ const circles = document.getElementsByClassName('circle'); //tak zhe html collec
 console.log(circles);
 
 //современные способы
-const hearts = document.querySelectorAll('.heart'); //css selector //. ставится потму что класс! //умеет forEach
+const hearts = document.querySelectorAll('.heart'); //css selector //. ставится потому что класс! //умеет forEach
 console.log(hearts);
 hearts.forEach(item => {
     console.log(item);
 });
+
+const oneHeart = document.querySelector('.heart'); //выберет только первый элемент
